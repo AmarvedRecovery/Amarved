@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <link rel="icon" type="image/jpeg" href="images/logo.png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Amarved Recovery System to book a discovery call or ask questions about our coaching program.">
+
+    <title>Contact Us | Amarved Recovery System</title>
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: var(--bg-color);
+            color: var(--text);
+            font-family: var(--font-sans);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--primary-light);
+        }
+    </style>
+</head>
+
+<body class="gradient-mesh">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="ph-fill ph-leaf"></i> Amarved<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="conditions.html" class="nav-link">Conditions</a>
+                <a href="program.html" class="nav-link">Program</a>
+                <a href="testimonials.html" class="nav-link">Stories</a>
+                <div class="dropdown">
+                    <span class="nav-link" style="cursor: pointer;">Free E-Book <i class="ph-bold ph-caret-down" style="font-size: 0.8em; margin-left: 2px;"></i></span>
+                    <div class="dropdown-content">
+                        <a href="ebook.html?lang=en">English</a>
+                        <a href="ebook.html?lang=hi">हिन्दी</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle"><i class="ph ph-moon"></i></button>
+                <a href="contact.html" class="btn btn-primary"
+                    style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">Book a Call</a>
+                <button class="menu-btn"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 120px;">
+        <section style="padding: 4rem 0;">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 4rem;">
+                    <span class="badge" data-aos="fade-down">Get in Touch</span>
+                    <h1 data-aos="fade-up" data-aos-delay="100">Let's start a conversation.</h1>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
+
+                    <div data-aos="fade-right">
+                        <div class="glass-card" style="padding: 2.5rem;">
+                            <h3 style="margin-bottom: 1.5rem;">Send us a message</h3>
+                            <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+                                <!-- FormSubmit config -->
+                                <input type="hidden" name="_subject" value="New submission from Amarved Contact Form">
+                                <input type="hidden" name="_captcha" value="false">
+
+                                <div class="form-group">
+                                    <label class="form-label" for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="condition">Primary Condition (Optional)</label>
+                                    <input type="text" id="condition" name="condition" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="message">How can we help you?</label>
+                                    <textarea id="message" name="message" class="form-input" rows="4"
+                                        required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-left" style="display: flex; flex-direction: column; gap: 2rem;">
+                        <div class="glass-card" style="padding: 2rem;">
+                            <h3 style="margin-bottom: 1.5rem; font-size: 1.25rem;">Contact Information</h3>
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                <i class="ph-fill ph-envelope-simple"
+                                    style="font-size: 1.5rem; color: var(--primary);"></i>
+                                <span><a href="mailto:amarvedrecovery@gmail.com">amarvedrecovery@gmail.com</a></span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                <i class="ph-fill ph-phone" style="font-size: 1.5rem; color: var(--primary);"></i>
+                                <span><a href="https://wa.me/919084692283" target="_blank">+91 9084692283</a></span>
+                            </div>
+                            <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                                <a href="https://instagram.com/amarvedrecovery" target="_blank"
+                                    style="font-size: 1.5rem; color: var(--text-light);"><i
+                                        class="ph ph-instagram-logo"></i></a>
+                                <a href="https://facebook.com/amarvedrecovery" target="_blank"
+                                    style="font-size: 1.5rem; color: var(--text-light);"><i
+                                        class="ph ph-facebook-logo"></i></a>
+                                <a href="https://www.youtube.com/@Amarvedrecovery" target="_blank"
+                                    style="font-size: 1.5rem; color: var(--text-light);"><i
+                                        class="ph ph-youtube-logo"></i></a>
+                                <a href="https://wa.me/919084692283" target="_blank"
+                                    style="font-size: 1.5rem; color: var(--text-light);"><i
+                                        class="ph ph-whatsapp-logo"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem;"><i class="ph-fill ph-leaf"></i>
+                        Amarved<span>.</span></a>
+                    <p style="font-size: 0.875rem; max-width: 300px;">A compassionate coaching system dedicated to
+                        supporting individuals with complex chronic illness.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear())</script> Amarved Recovery System. All rights
+                    reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <link rel="icon" type="image/jpeg" href="images/logo.png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently Asked Questions about the Amarved Recovery System coaching program.">
+
+    <title>FAQ | Amarved Recovery System</title>
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 1.125rem;
+            color: var(--dark);
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+            color: var(--primary);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, margin-top 0.4s ease;
+            color: var(--text-light);
+        }
+
+        .faq-item.active .faq-answer {
+            margin-top: 1rem;
+            max-height: 500px;
+            /* arbitrary large value for transition */
+        }
+    </style>
+</head>
+
+<body class="gradient-mesh">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="ph-fill ph-leaf"></i> Amarved<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="conditions.html" class="nav-link">Conditions</a>
+                <a href="program.html" class="nav-link">Program</a>
+                <a href="testimonials.html" class="nav-link">Stories</a>
+                <div class="dropdown">
+                    <span class="nav-link" style="cursor: pointer;">Free E-Book <i class="ph-bold ph-caret-down" style="font-size: 0.8em; margin-left: 2px;"></i></span>
+                    <div class="dropdown-content">
+                        <a href="ebook.html?lang=en">English</a>
+                        <a href="ebook.html?lang=hi">हिन्दी</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle"><i class="ph ph-moon"></i></button>
+                <a href="contact.html" class="btn btn-primary"
+                    style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">Book a Call</a>
+                <button class="menu-btn"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 120px;">
+        <section style="padding: 4rem 0;">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 4rem;">
+                    <span class="badge" data-aos="fade-down">Support</span>
+                    <h1 data-aos="fade-up" data-aos-delay="100">Frequently Asked Questions</h1>
+                </div>
+
+                <div class="glass-card" data-aos="fade-up"
+                    style="max-width: 800px; margin: 0 auto; padding: 2rem 3rem;">
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Is this program a substitute for medical treatment?
+                            <i class="ph ph-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No. The Amarved Recovery System provides educational and coaching services. It is not a
+                                substitute for professional medical advice, diagnosis, or treatment. We do not prescribe
+                                medications or offer medical diagnoses.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do you guarantee a cure?
+                            <i class="ph ph-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No ethical practitioner guarantees a cure for chronic illnesses like ME/CFS or Long
+                                COVID. What we provide is a science-backed framework to maximize your body's healing
+                                potential, significantly expand your energy envelope, and improve your quality of life.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Will I have to do graded exercise therapy (GET)?
+                            <i class="ph ph-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely not. We strictly oppose GET, as pushing through Post-Exertional Malaise (PEM)
+                                is actively harmful. Our approach relies on finding your absolute safe baseline and
+                                using microscopic exposures only when your nervous system is fully regulated and safe.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How much time does the program require daily?
+                            <i class="ph ph-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The program is designed for people with very limited energy. Formal exercises take about
+                                15-20 minutes a day. The rest of the program is about modifying how you go about your
+                                existing daily activities.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem;"><i class="ph-fill ph-leaf"></i>
+                        Amarved<span>.</span></a>
+                    <p style="font-size: 0.875rem; max-width: 300px;">A compassionate coaching system dedicated to
+                        supporting individuals with complex chronic illness.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear())</script> Amarved Recovery System. All rights
+                    reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                // Close others
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    if (faq !== parent) {
+                        faq.classList.remove('active');
+                    }
+                });
+                // Toggle current
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
+

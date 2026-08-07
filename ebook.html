@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <link rel="icon" type="image/jpeg" href="images/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download the FREE AmarVed Recovery System E-Book.">
+    <title>Free E-Book | Amarved Recovery System</title>
+
+    <!-- Fonts & Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Native PDF Viewer Integration -->
+    
+
+
+    <style>
+        .ebook-form-card {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            box-shadow: var(--shadow-lg);
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .form-group { margin-bottom: 1.5rem; text-align: left; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--dark); }
+        .form-group input { width: 100%; padding: 1rem; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-color); color: var(--text); font-family: var(--font-sans); font-size: 1rem; transition: border-color 0.3s ease; }
+        .form-group input:focus { outline: none; border-color: var(--primary); }
+        .success-box { display: none; text-align: center; }
+        .success-box h3 { color: var(--secondary); margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+        
+        /* PDF.js Viewer Styles */
+        #pdf-render-container {
+            width: 100%;
+            overflow: auto;
+            background: #f1f5f9;
+            border-radius: 12px;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: center;
+            padding: 2rem 0;
+            position: relative;
+        }
+        canvas.pdf-page {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 100%;
+            height: auto !important;
+        }
+        .pdf-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            background: var(--white);
+            padding: 1rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+        }
+        .pdf-controls button {
+            background: var(--bg-color);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background 0.2s;
+        }
+        .pdf-controls button:hover { background: var(--border); }
+        .pdf-controls span { font-weight: 500; }
+        
+        #pdf-loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        .cf-turnstile-container { margin-bottom: 1.5rem; display: flex; justify-content: center; }
+    </style>
+</head>
+
+<body class="gradient-mesh">
+    <div class="blob blob-primary"></div>
+    <div class="blob blob-secondary"></div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="ph-fill ph-leaf"></i> Amarved<span>.</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="conditions.html" class="nav-link">Conditions</a>
+                <a href="program.html" class="nav-link">Program</a>
+                <a href="testimonials.html" class="nav-link">Stories</a>
+                <div class="dropdown">
+                    <span class="nav-link active" style="cursor: pointer;">Free E-Book <i class="ph-bold ph-caret-down" style="font-size: 0.8em; margin-left: 2px;"></i></span>
+                    <div class="dropdown-content">
+                        <a href="ebook.html?lang=en">English</a>
+                        <a href="ebook.html?lang=hi">हिन्दी</a>
+                    </div>
+                </div>
+                <div class="nav-actions mobile-only" style="display: none;">
+                    <a href="contact.html" class="btn btn-primary">Book a Call</a>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Dark Mode"><i class="ph ph-moon"></i></button>
+                <a href="contact.html" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">Book a Call</a>
+                <button class="menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section style="min-height: 100vh; display: flex; align-items: center; padding-top: 120px;">
+            <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                
+                <div data-aos="fade-up">
+                    <span class="badge" id="badge-text">Free Resource</span>
+                    <h1 id="hero-title" style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 1rem; font-family: 'Poppins', sans-serif;">
+                        Loading...
+                    </h1>
+                    <p id="hero-subtitle" style="font-size: 1.125rem; margin-bottom: 2rem;">
+                        Please wait while we prepare your resource.
+                    </p>
+                    
+                    <div id="form-container" class="ebook-form-card" style="display:none;">
+                        <h3 id="form-title" style="margin-bottom: 1.5rem; text-align: center;">Unlock Your Copy Now</h3>
+                        <form id="ebook-form">
+                            <div class="form-group">
+                                <label id="label-name" for="name">Full Name *</label>
+                                <input type="text" id="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label id="label-whatsapp" for="whatsapp">WhatsApp Number *</label>
+                                <input type="tel" id="whatsapp" required placeholder="+1 234 567 8900">
+                            </div>
+                            <div class="form-group">
+                                <label id="label-email" for="email">Email Address *</label>
+                                <input type="email" id="email" required placeholder="john@example.com">
+                            </div>
+                            
+
+                            
+                            <button type="submit" class="btn btn-primary" id="submit-btn" style="width: 100%;">
+                                <span class="btn-text" id="btn-text-submit">Unlock My Free E-Book</span>
+                                <span class="spinner"></span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div id="success-container" class="ebook-form-card success-box">
+                        <h3 id="success-title"><i class="ph-fill ph-check-circle"></i> Thank you! Your e-book is now unlocked.</h3>
+                        <p id="success-subtitle" style="margin-bottom: 2rem;">You can read it right here on our website or download the PDF to your device.</p>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                            <button id="read-online-btn" class="btn btn-primary">
+                                <i class="ph ph-book-open"></i> <span id="btn-text-read">Read Online</span>
+                            </button>
+                            <a id="download-link" href="#" download class="btn btn-secondary">
+                                <i class="ph ph-download-simple"></i> <span id="btn-text-download">Download PDF</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual" data-aos="zoom-in" data-aos-delay="200" style="text-align: center;">
+                    <img id="mockup-img" src="" alt="E-Book Mockup" style="width: 100%; max-width: 450px; height: auto; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15)); display:none;">
+                </div>
+            </div>
+        </section>
+
+        <!-- PDF Viewer Section -->
+        <section id="pdf-viewer-section" style="display: none; padding-top: 2rem; padding-bottom: 5rem;">
+            <div class="container">
+                <h3 id="pdf-viewer-title" class="text-center" style="margin-bottom: 2rem;">Amarved E-Book</h3>
+                <div class="pdf-container" style="width: 100%; height: 800px; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-lg);">
+                    <iframe id="pdf-iframe" src="" style="width: 100%; height: 100%; border: none;"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem;"><i class="ph-fill ph-leaf"></i> Amarved<span>.</span></a>
+                    <p style="font-size: 0.875rem; max-width: 300px;">A compassionate coaching system dedicated to supporting individuals with complex chronic illness.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Amarved Recovery System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/ebook.js"></script>
+</body>
+</html>
+

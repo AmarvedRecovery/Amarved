@@ -1,0 +1,91 @@
+/* 
+ * Amarved Recovery System - Responsive Stylesheet 
+ */
+
+/* Tablets & Small Desktops */
+@media (max-width: 1024px) {
+  :root {
+    --section-py: 80px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  :root {
+    --section-py: 60px;
+  }
+
+  /* Override inline 2-column grids for mobile */
+  [style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+    text-align: center;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: var(--white);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
+    z-index: 1000;
+    gap: 2rem;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-link {
+    font-size: 2rem;
+  }
+
+  .nav-links .mobile-only {
+    display: block !important;
+    margin-top: 2rem;
+  }
+
+  /* Keep nav-actions visible so menu button shows */
+  .nav-actions {
+    display: flex !important;
+  }
+
+  /* Hide the desktop "Book a Call" button to save space on mobile header */
+  .nav-actions > .btn {
+    display: none !important;
+  }
+
+  .glass-card {
+    padding: 2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Disable custom cursor on touch devices */
+  .cursor-dot, .cursor-outline {
+    display: none !important;
+  }
+}
