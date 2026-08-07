@@ -18,7 +18,7 @@ const EBOOK_CONFIG = {
         btnRead: "Read Online",
         btnDownload: "Download PDF",
         mockup: "images/ebook_mockup_en.png",
-        pdfUrl: "pdfs/Amarved_PDF_(English).pdf"
+        pdfUrl: "PDFs/Amarved_PDF_(English).pdf"
     },
     hi: {
         id: "HI_EBOOK",
@@ -35,7 +35,7 @@ const EBOOK_CONFIG = {
         btnRead: "ऑनलाइन पढ़ें",
         btnDownload: "पीडीएफ डाउनलोड करें",
         mockup: "images/ebook_mockup_hi.png",
-        pdfUrl: "pdfs/Amarved_PDF_(Hindi).pdf"
+        pdfUrl: "PDFs/Amarved_PDF_(Hindi).pdf"
     }
 };
 
